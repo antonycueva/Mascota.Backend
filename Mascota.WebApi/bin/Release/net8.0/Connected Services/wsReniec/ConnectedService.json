@@ -1,0 +1,36 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "http://bpm.senasa.gob.pe:7003/GestionPersonaWS/GestionPersonaWSPort"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "internalTypeAccess": true,
+    "namespaceMappings": [
+      "*, wsReniec"
+    ],
+    "references": [
+      "C:\\TFS\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\obj\\Release\\net8.0\\PubTmp\\Out\\Mascota.Data.dll",
+      "C:\\TFS\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\obj\\Release\\net8.0\\PubTmp\\Out\\Mascota.Entidad.dll",
+      "C:\\TFS\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\obj\\Release\\net8.0\\PubTmp\\Out\\Mascota.Logica.dll",
+      "Microsoft.Extensions.Configuration.Abstractions, {Microsoft.Extensions.Configuration.Abstractions, 8.0.0}",
+      "Microsoft.Extensions.Primitives, {Microsoft.Extensions.Primitives, 8.0.0}",
+      "Microsoft.OpenApi, {Microsoft.OpenApi, 1.6.14}",
+      "Oracle.ManagedDataAccess, {Oracle.ManagedDataAccess.Core, 23.4.0}",
+      "Swashbuckle.AspNetCore.Swagger, {Swashbuckle.AspNetCore.Swagger, 6.6.2}",
+      "Swashbuckle.AspNetCore.SwaggerGen, {Swashbuckle.AspNetCore.SwaggerGen, 6.6.2}",
+      "Swashbuckle.AspNetCore.SwaggerUI, {Swashbuckle.AspNetCore.SwaggerUI, 6.6.2}",
+      "System.Configuration.ConfigurationManager, {System.Configuration.ConfigurationManager, 8.0.0}",
+      "System.Diagnostics.EventLog, {System.Diagnostics.EventLog, 8.0.0}",
+      "System.Diagnostics.PerformanceCounter, {System.Diagnostics.PerformanceCounter, 8.0.0}",
+      "System.DirectoryServices.Protocols, {System.DirectoryServices.Protocols, 8.0.0}",
+      "System.Formats.Asn1, {System.Formats.Asn1, 8.0.0}",
+      "System.Security.Cryptography.Pkcs, {System.Security.Cryptography.Pkcs, 8.0.0}",
+      "System.Security.Cryptography.ProtectedData, {System.Security.Cryptography.ProtectedData, 8.0.0}"
+    ],
+    "targetFramework": "net8.0",
+    "typeReuseMode": "All"
+  }
+}

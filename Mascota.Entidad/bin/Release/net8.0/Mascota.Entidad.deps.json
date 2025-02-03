@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Mascota.Entidad/1.0.0": {
+        "runtime": {
+          "Mascota.Entidad.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mascota.Entidad/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

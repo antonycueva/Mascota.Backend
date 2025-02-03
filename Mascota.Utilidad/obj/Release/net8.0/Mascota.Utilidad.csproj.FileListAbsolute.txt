@@ -1,0 +1,39 @@
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.deps.json
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.dll
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.pdb
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.csproj.AssemblyReference.cache
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.AssemblyInfoInputs.cache
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.AssemblyInfo.cs
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.csproj.CoreCompileInputs.cache
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.sourcelink.json
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.dll
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\refint\Mascota.Utilidad.dll
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.pdb
+D:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\ref\Mascota.Utilidad.dll
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.deps.json
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.dll
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.pdb
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.csproj.AssemblyReference.cache
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.AssemblyInfoInputs.cache
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.AssemblyInfo.cs
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.csproj.CoreCompileInputs.cache
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.sourcelink.json
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.dll
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\refint\Mascota.Utilidad.dll
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.pdb
+C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\ref\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.deps.json
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Release\net8.0\Mascota.Utilidad.pdb
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.csproj.AssemblyReference.cache
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.AssemblyInfoInputs.cache
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.AssemblyInfo.cs
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.csproj.CoreCompileInputs.cache
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.sourcelink.json
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\refint\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\Mascota.Utilidad.pdb
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Release\net8.0\ref\Mascota.Utilidad.dll

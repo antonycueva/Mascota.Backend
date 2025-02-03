@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "I1UqF5giOHaJb0VyI3I/Vjm2dRsGuBgP+LfkaYedH5k=",
+  "Source": "Mascota.WebApi",
+  "BasePath": "_content/Mascota.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

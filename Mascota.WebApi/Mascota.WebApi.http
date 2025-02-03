@@ -1,0 +1,6 @@
+@Mascota.WebApi_HostAddress = http://localhost:5193
+
+GET {{Mascota.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
