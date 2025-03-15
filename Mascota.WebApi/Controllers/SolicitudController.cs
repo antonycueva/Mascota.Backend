@@ -238,6 +238,31 @@ namespace Mascota.WebApi.Controllers
             return lista;
         }
 
+
+        [HttpGet]
+        [Route("documento/listar2")]
+        public List<solicitud_inspeccion_relacion_documentoBE> listar_documento2(int id_solicitud)
+        {
+            List<solicitud_inspeccion_relacion_documentoBE> lista = solicitudBL.listar_documento2(id_solicitud);
+            return lista;
+        }
+
+        [HttpGet]
+        [Route("certificado/listar")]
+        public List<certificado> listar_certificado_cab(int id_solicitud)
+        {
+            List<certificado> lista = solicitudBL.listar_certificado_cab(id_solicitud);
+            return lista;
+        }
+
+        [HttpGet]
+        [Route("certificadoDet/listar")]
+        public List<certificado_detBE> listar_certificado_det(int id_solicitud)
+        {
+            List<certificado_detBE> lista = solicitudBL.listar_certificado_det(id_solicitud);
+            return lista;
+        }
+
         [HttpPost]
         [Route("exportador/registrar")]
         public respuestaBE registrar_exportador(solicitud_inspeccion_expo_cabBE input)

@@ -24,3 +24,16 @@ C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascot
 C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\refint\Mascota.Utilidad.dll
 C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.pdb
 C:\TFS\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\ref\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Debug\net8.0\Mascota.Utilidad.deps.json
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Debug\net8.0\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\bin\Debug\net8.0\Mascota.Utilidad.pdb
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.csproj.AssemblyReference.cache
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.AssemblyInfoInputs.cache
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.AssemblyInfo.cs
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.csproj.CoreCompileInputs.cache
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.sourcelink.json
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\refint\Mascota.Utilidad.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\Mascota.Utilidad.pdb
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Utilidad\obj\Debug\net8.0\ref\Mascota.Utilidad.dll

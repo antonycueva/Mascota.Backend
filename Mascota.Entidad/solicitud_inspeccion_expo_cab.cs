@@ -110,7 +110,17 @@
         public string fecha_especialista { get; set; } = string.Empty;
         public string fecha_medico { get; set; } = string.Empty;
 
-       
+        public string codigo_certificado { get; set; } = string.Empty;
+        public string documento_tipo_expo { get; set; } = string.Empty;
+        public string nombre_exportador { get; set; } = string.Empty;
+        public string direccion_exportador { get; set; } = string.Empty;
+        public string num_doc_exportador { get; set; } = string.Empty;
+        public string desc_certificado_expo { get; set; } = string.Empty;
+        public string observacion_certificado_expo { get; set; } = string.Empty;
+        public string medida_sanitaria_cert { get; set; } = string.Empty;
+        public string idioma_cert { get; set; } = string.Empty;
+
+
 
     }
 }

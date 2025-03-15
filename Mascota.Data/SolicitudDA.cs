@@ -886,6 +886,113 @@ namespace Mascota
             }
             return lista;
         }
+
+        public List<certificado> listar_certificado_cab(int id_solicitud)
+        {
+            List<certificado> lista = new List<certificado>();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_listar_certificado_cab";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID_SIE_CAB", id_solicitud));
+                    cmd.Parameters.Add(new OracleParameter("P_CURSOR", OracleDbType.RefCursor, ParameterDirection.Output));
+
+                    try
+                    {
+                        conx.Open();
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                certificado item = new certificado();
+                                item.numero_expediente = helperDA.GetString(reader, "NUMERO_EXPEDIENTE");
+                                item.nombre_exportador = helperDA.GetString(reader, "NOMBRE_EXPORTADOR");
+                                item.direccion_exportador = helperDA.GetString(reader, "DIRECCION_EXPORTADOR");
+                                item.nombre_importador = helperDA.GetString(reader, "NOMBRE_IMPORTADOR");
+                                item.direccion_importador = helperDA.GetString(reader, "DIRECCION_IMPORTADOR");
+                                item.pais_transito = helperDA.GetString(reader, "PAIS_TRANSITO");
+                                item.pais_destino = helperDA.GetString(reader, "PAIS_DESTINO");
+                                item.medio_transporte = helperDA.GetString(reader, "MEDIO_TRANSPORTE");
+                                item.punto_salida = helperDA.GetString(reader, "PUNTO_SALIDA");
+                                item.fecha_embarque = helperDA.GetString(reader, "FECHA_EMBARQUE");
+                                item.punto_llegada = helperDA.GetString(reader, "PUNTO_LLEGADA");
+                                item.uso_destino = helperDA.GetString(reader, "USO_DESTINO");
+                                item.fecha_inspeccion = helperDA.GetString(reader, "FECHA_INSPECCION");
+                                item.hora_inspe = helperDA.GetString(reader, "HORA_INSPE");
+                                item.requiere_tratamiento = helperDA.GetString(reader, "REQUIERE_TRATAMIENTO");
+                                item.requiere_analisis_lab = helperDA.GetString(reader, "REQUIERE_ANALISIS_LAB");
+                                item.medida_sanitaria_cert = helperDA.GetString(reader, "MEDIDA_SANITARIA_CERT");
+                                item.puesto_control_salida = helperDA.GetString(reader, "PUESTO_CONTROL_SALIDA");
+                                item.cumple_req_pais_des = helperDA.GetString(reader, "CUMPLE_REQ_PAIS_DES");
+                                item.cumple_exg_senasa = helperDA.GetString(reader, "CUMPLE_EXG_SENASA");
+                                item.apto_cert = helperDA.GetString(reader, "APTO_CERT");
+
+                                lista.Add(item);
+                            }
+                        }
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.registrar_linea("listar_documento", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public List<certificado_detBE> listar_certificado_det(int id_solicitud)
+        {
+            List<certificado_detBE> lista = new List<certificado_detBE>();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_listar_certificado_det";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID_SIE_CAB", id_solicitud));
+                    cmd.Parameters.Add(new OracleParameter("P_CURSOR", OracleDbType.RefCursor, ParameterDirection.Output));
+
+                    try
+                    {
+                        conx.Open();
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                certificado_detBE item = new certificado_detBE();
+                                item.especie = helperDA.GetString(reader, "ESPECIE");
+                                item.cantidad = helperDA.GetString(reader, "CANTIDAD");
+                                item.identificacion = helperDA.GetString(reader, "IDENTIFICACION");
+                                item.raza = helperDA.GetString(reader, "RAZA");
+                                item.sexo = helperDA.GetString(reader, "SEXO");
+                                item.edad = helperDA.GetString(reader, "EDAD");
+                                lista.Add(item);
+                            }
+                        }
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.registrar_linea("listar_documento", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return lista;
+        }
+
         public List<concepto_pagoBE> listar_concepto_pago(int id_solicitud, string codigo_area, string id_marca_inspeccion)
         {
             List<concepto_pagoBE> lista = new List<concepto_pagoBE>();
@@ -1183,6 +1290,55 @@ namespace Mascota
             }
             return lista;
         }
+
+        public List<solicitud_inspeccion_relacion_documentoBE> listar_documento2(int id_solicitud)
+        {
+            List<solicitud_inspeccion_relacion_documentoBE> lista = new List<solicitud_inspeccion_relacion_documentoBE>();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_listar_documento_inf_cert";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID_SIE_CAB", id_solicitud));
+                    cmd.Parameters.Add(new OracleParameter("P_CURSOR", OracleDbType.RefCursor, ParameterDirection.Output));
+
+                    try
+                    {
+                        conx.Open();
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                solicitud_inspeccion_relacion_documentoBE item = new solicitud_inspeccion_relacion_documentoBE();
+                                item.id = helperDA.GetInteger(reader, "id");
+                                item.nomb_documento = helperDA.GetString(reader, "NOMB_DOCUMENTO");
+                                item.desc_documento = helperDA.GetString(reader, "DESC_DOCUMENTO");
+                                item.condicion = helperDA.GetString(reader, "CONDICION");
+                                item.info_documento = helperDA.GetString(reader, "INFO_DOCUMENTO");
+                                item.estado = helperDA.GetString(reader, "estado");
+                                item.fecha = helperDA.GetString(reader, "fecha");
+                                item.id_sie_doc_det = helperDA.GetInteger(reader, "id_sie_doc_det");
+                                item.origen = helperDA.GetString(reader, "origen");
+                                lista.Add(item);
+                            }
+                        }
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.registrar_linea("listar_documento", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return lista;
+        }
+
         public List<solicitud_inspeccion_expoBE> listar_solicitud(int situacion, string? estado, string? codigo, string? tipo_usuario)
         {
             List<solicitud_inspeccion_expoBE> lista = new List<solicitud_inspeccion_expoBE>();
@@ -2156,6 +2312,15 @@ namespace Mascota
                     cmd.Parameters.Add(new OracleParameter("P_ESTADO", solicitud.estado));
                     cmd.Parameters.Add(new OracleParameter("P_COMENTARIO_REVISION", solicitud.comentario_revision));
                     cmd.Parameters.Add(new OracleParameter("P_USER_APR", solicitud.user_apro));
+                    cmd.Parameters.Add(new OracleParameter("P_CODIGO_CERTIFICADO", solicitud.codigo_certificado));
+                    cmd.Parameters.Add(new OracleParameter("P_DOCUMENTO_TIPO_EXPO", solicitud.documento_tipo_expo));
+                    cmd.Parameters.Add(new OracleParameter("P_NOMBRE_EXPORTADOR", solicitud.nombre_exportador));
+                    cmd.Parameters.Add(new OracleParameter("P_DIRECCION_EXPORTADOR", solicitud.direccion_exportador));
+                    cmd.Parameters.Add(new OracleParameter("P_NUM_DOC_EXPORTADOR", solicitud.num_doc_exportador));
+                    cmd.Parameters.Add(new OracleParameter("P_DESC_CERTIFICADO_EXPO", solicitud.desc_certificado_expo));
+                    cmd.Parameters.Add(new OracleParameter("P_OBSERVACION_CERTIFICADO_EXPO", solicitud.observacion_certificado_expo));
+                    cmd.Parameters.Add(new OracleParameter("P_MEDIDA_SANITARIA_CERT", solicitud.medida_sanitaria_cert));
+                    cmd.Parameters.Add(new OracleParameter("P_IDIOMA_CERT", solicitud.idioma_cert));
 
                     try
                     {

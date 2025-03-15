@@ -16,7 +16,7 @@ namespace Mascota
         public string estado { get; set; } = string.Empty;
         public string anno { get; set; } = string.Empty;
     }
-
+     
     public class solicitud_inspeccion_relacion_documentoBE
     {
         public int id { get; set; } = 0;
@@ -28,6 +28,7 @@ namespace Mascota
         public string estado { get; set; } = string.Empty;
         public string fecha { get; set; } = string.Empty;
         public int id_sie_doc_det { get; set; } = 0;
+        public string origen {  get; set; } = string.Empty;
 
     }
 }

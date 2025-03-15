@@ -23,6 +23,16 @@ namespace Mascota
             return new solicitudDA(conn).listar_recibo_pago(id_solicitud);
         }
 
+        public static List<certificado> listar_certificado_cab(int id_solicitud)
+        {
+            return new solicitudDA(conn).listar_certificado_cab(id_solicitud);
+        }
+
+        public static List<certificado_detBE> listar_certificado_det(int id_solicitud)
+        {
+            return new solicitudDA(conn).listar_certificado_det(id_solicitud);
+        }
+
         public static List<paisesBE> listar_paises_origen()
         {
             return new solicitudDA(conn).listar_paises_origen();
@@ -106,6 +116,10 @@ namespace Mascota
         public static List<solicitud_inspeccion_relacion_documentoBE> listar_documento(string tipo_documento, int id_solicitud)
         {
             return new solicitudDA(conn).listar_documento(tipo_documento, id_solicitud);
+        }
+        public static List<solicitud_inspeccion_relacion_documentoBE> listar_documento2(int id_solicitud)
+        {
+            return new solicitudDA(conn).listar_documento2(id_solicitud);
         }
         public static List<solicitud_inspeccion_expoBE> listar_solicitud(int situacion, string? estado, string? codigo, string? tipo_usuario)
         {
