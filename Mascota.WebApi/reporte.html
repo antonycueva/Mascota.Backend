@@ -38,34 +38,53 @@
         }
 
         .table {
-            border-color: #000 !important;
+            border-color: #000 ;
             margin-bottom: 2px !important;
             width: 100%;
         }
 
+        .tabla-sin-estilo {
+            border: 0px solid #fff !important;
+        }
+
+
         .table-bordered {
             border: 1px solid #000 !important;
         }
+
         .condition {
-        width: 15px;
-        height: 15px;
-        border: 1.5px solid rgba(0, 0, 0, 0.7) !important;
-        display: inline-block;
-        text-align: center;
-      }
+            width: 15px;
+            height: 15px;
+            border: 1.5px solid rgba(0, 0, 0, 0.7) !important;
+            display: inline-block;
+            text-align: center;
+        }
+        .th {
+            text-align: left;
+        }
     </style>
 </head>
 
-<body class="fs-7">
-    <div class="d-flex justify-content-center align-items-center" style="margin-bottom: 0px;">
-        <!-- <img src="/path/to/logo.png" alt="Logo" style="height: 30px; margin-right: 10px;"> -->
-    </div>
-    <!-- <h6 class="text-center fs-5">REG-CISF-02</h5> -->
-    <h2>INFORME DE INSPECCIÓN PARA LA CERTIFICACIÓN DE EXPORTACIÓN DE MERCANCÍAS PECUARIAS</h2>
+<body >
+   <table class="tabla-sin-estilo">
+
+   
+        <tr>
+            <td style="width: 20%; text-align: center; border: none;">
+                <img src="https://www.cedepas.org.pe/sites/default/files/senasa2.png" alt="Logo" style="height: 80px;">
+            </td>
+            <td style="width: 80%; text-align: center; border: none;">
+                <h2 class="mb-0">
+                    INFORME DE INSPECCIÓN PARA LA CERTIFICACIÓN DE EXPORTACIÓN DE MERCANCÍAS PECUARIAS
+                </h2>
+            </td>
+        </tr>
+    </table>
+    
 
     <table class="table table-bordered fs-6">
         <tr>
-            <th colspan="2">A. DATOS DEL EXPORTADOR / IMPORTADOR</th>
+            <th colspan="2" style="text-align: left;">A. DATOS DEL EXPORTADOR / IMPORTADOR</th>
         </tr>
         <tr>
             <th>a.Nombre/Razón social y Dirección del Exportador</th>
@@ -85,9 +104,9 @@
         </tr>
     </table>
 
-    <table class="table table-bordered ">
+    <table class="table table-bordered fs-6">
         <tr>
-            <th colspan="5">B. DATOS DEL ENVÍO</th>
+            <th colspan="5" style="text-align: left;">B. DATOS DEL ENVÍO</th>
         </tr>
         <tr>
             <th>Medio Transporte</th>
@@ -117,9 +136,9 @@
         </tr>
     </table>
 
-    <table class="table table-bordered ">
+    <table class="table table-bordered fs-6">
         <tr>
-            <th colspan="7">C. DATOS DE LA MERCANCÍA PECUARIA</th>
+            <th colspan="7" style="text-align: left;">C. DATOS DE LA MERCANCÍA PECUARIA</th>
         </tr>
         <tr>
             <th>Especie</th>
@@ -128,34 +147,30 @@
             <th>Raza</th>
             <th>Sexo</th>
             <th>Edad</th>
-            <th>Lugar de origen</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        {{Detalles}}
     </table>
 
-    <table class="table table-bordered ">
+    <table class="table table-bordered fs-6">
         <tr>
-            <th colspan="4">D. DEL TRATAMIENTO CUARENTENARIO</th>
+            <th colspan="4" style="text-align: left;">D. DEL TRATAMIENTO CUARENTENARIO</th>
         </tr>
         <tr>
-            <td >1.- Requiere Tratamiento</td>
+            <td>1.- Requiere Tratamiento</td>
             <td> Si<div class="condition fw-bold">
-                <span class="text-secondary">
-                    {{RequiereTratamiento}}
-                </span>
-            
-            </div></td>
+                    <span class="text-secondary">
+                        {{RequiereTratamiento}}
+                    </span>
+
+                </div>
+            </td>
             <td> No<div class="condition fw-bold">
-                <span class="text-secondary">
-                    {{RequiereTratamiento}}
-                </span>
-            
-            </div></td>
+                    <span class="text-secondary">
+                        {{RequiereTratamiento}}
+                    </span>
+
+                </div>
+            </td>
             <td>2.-Tipo Tratamiento</td>
         </tr>
         <tr>
@@ -167,51 +182,52 @@
             <td>6.- Tiempo de Exposicion</td>
         </tr>
         <tr>
-            <td colspan="4">7.- Fecha de  tratamiento</td>
-           
+            <td colspan="4">7.- Fecha de tratamiento</td>
+
         </tr>
         <tr>
             <td colspan="4">Observaciones</td>
-           
+
         </tr>
     </table>
 
-    <table class="table table-bordered ">
+    <table class="table table-bordered fs-6">
         <tr>
-            <th colspan="3">E. DEL ANÁLISIS DE LABORATORIO</th>
+            <th colspan="3" style="text-align: left;">E. DEL ANÁLISIS DE LABORATORIO</th>
         </tr>
         <tr>
             <td style="width: 30%;">Requiere Análisis de Laboratorio</td>
-            <td style="width: 30%;">Sí 
+            <td style="width: 30%;">Sí
                 <div class="condition fw-bold">
                     <span class="text-secondary">
                         {{RequiereAnalisisLab}}
                     </span>
-                
+
                 </div>
             </td>
-            <td >No 
+            <td>No
                 <div class="condition fw-bold">
                     <span class="text-secondary">
                         {{RequiereAnalisisLab}}
                     </span>
-                
+
                 </div>
             </td>
         </tr>
         <tr>
             <td>Resultado Favorable <div class="condition fw-bold">
-                <span class="text-secondary">
-                  
-                </span>
-            
-            </div></td>
-            <td > Resultado Desfavorable
+                    <span class="text-secondary">
+
+                    </span>
+
+                </div>
+            </td>
+            <td> Resultado Desfavorable
                 <div class="condition fw-bold">
                     <span class="text-secondary">
-                      
+
                     </span>
-                
+
                 </div>
             </td>
             <td>Fecha</td>
@@ -221,9 +237,9 @@
             <td colspan="2"></td>
         </tr>
     </table>
-    <table class="table table-bordered ">
+    <table class="table table-bordered fs-6">
         <tr>
-            <th>F. DE OTRA MEDIDA SANITARIA</th>
+            <th style="text-align: left;">F. DE OTRA MEDIDA SANITARIA</th>
         </tr>
         <tr>
             <td style="height: 4em;">
@@ -232,89 +248,98 @@
         </tr>
     </table>
 
-    <table class="table table-bordered">
-        <tr><th colspan="4">G. DATOS DE LA INSPECCIÓN</th></tr>
+    <table class="table table-bordered fs-6">
+        <tr>
+            <th colspan="4" style="text-align: left;">G. DATOS DE LA INSPECCIÓN</th>
+        </tr>
         <tr>
             <td style="border: none;">1.- Inspección en:</td>
-            <td style="border: none;">Origen   <div class="condition fw-bold">
-                <span class="text-secondary">
-                  
-                </span>
-            
-            </div></td>
+            <td style="border: none;">Origen <div class="condition fw-bold">
+                    <span class="text-secondary">
+
+                    </span>
+
+                </div>
+            </td>
             <td style="border: none;">Puesto de Control de Salida:<div class="condition fw-bold">
-                <span class="text-secondary">
-                </span>
-            </div></td>
+                    <span class="text-secondary">
+                    </span>
+                </div>
+            </td>
             <td>Otro/Detallar: <input type="text" style="width: 50%;"></td>
         </tr>
         <tr>
             <td style="border: none;">2.- Cumple con los requisitos sanitarios del país de destino</td>
-            <td style="border: none;">Sí 
+            <td style="border: none;">Sí
                 <div class="condition fw-bold">
                     <span class="text-secondary">
-                      
+
                     </span>
-                
+
                 </div>
             </td>
-            <td >No 
+            <td colspan="2">No
                 <div class="condition fw-bold">
                     <span class="text-secondary">
-                      
+
                     </span>
-                
+
                 </div>
             </td>
-         
+
         </tr>
         <tr>
-            <td >3.- Cumple con las exigencias del SENASA</td>
-            <td >Sí <div class="condition fw-bold">
-                <span class="text-secondary">
-                  
-                </span>
-            
-            </div></td>
-            <td >No <div class="condition fw-bold">
-                <span class="text-secondary">
-                  
-                </span>
-            
-            </div></td>
-           
-        </tr>
-    </table>
-    <table class="table table-bordered">
-        <tr><th colspan="4">H. RESULTADO</th></tr>
-        <tr>
-            <td>Apto para la certificación: 
-                <div class="condition fw-bold">
-                      <span class="text-secondary">
-                        
-                      </span>
-                  
-                  </div>
+            <td>3.- Cumple con las exigencias del SENASA</td>
+            <td>Sí <div class="condition fw-bold">
+                    <span class="text-secondary">
+
+                    </span>
+
+                </div>
             </td>
-            <td >No apto para la certificación:
-                <div class="condition fw-bold">
-                <span class="text-secondary">
-                  
-                </span>
-            
-            </div></td>
-        </tr>
-        <tr>
-            <td >Contenedor:</td>
-        </tr>
-        <tr>
-            <td >Pecinto de seguridad:</td>
-        </tr>
-        <tr>
-            <td>Observaciones:</td>
+            <td colspan="2">No <div class="condition fw-bold">
+                    <span class="text-secondary">
+
+                    </span>
+
+                </div>
+            </td>
+
         </tr>
     </table>
-    <table class="table table-bordered">
+    <table class="table table-bordered fs-6">
+        <tr>
+            <th colspan="4" style="text-align: left;">H. RESULTADO</th>
+        </tr>
+        <tr>
+            <td>Apto para la certificación:
+                <div class="condition fw-bold">
+                    <span class="text-secondary">
+
+                    </span>
+
+                </div>
+            </td>
+            <td>No apto para la certificación:
+                <div class="condition fw-bold">
+                    <span class="text-secondary">
+
+                    </span>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Contenedor:</td>
+        </tr>
+        <tr>
+            <td colspan="2">Pecinto de seguridad:</td>
+        </tr>
+        <tr>
+            <td colspan="2">Observaciones:</td>
+        </tr>
+    </table>
+    <table class="table table-bordered fs-6">
         <tr>
             <th>Firma del personal autorizado por SENASA</th>
             <th>Firma del personal autorizado por SENASA</th>
