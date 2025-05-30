@@ -35,7 +35,7 @@ public class ReportController : ControllerBase
         try
         {
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync($"http://localhost:5000/solicitud/certificado/listar?id_solicitud={id}");
+            var response = await client.GetAsync($"http://localhost:5193/solicitud/certificado/listar?id_solicitud={id}");
             if (!response.IsSuccessStatusCode)
             {
                 _logger.LogError($"Error fetching data from certificado/listar: {response.StatusCode}");

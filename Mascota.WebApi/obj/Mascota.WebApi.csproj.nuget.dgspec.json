@@ -344,6 +344,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DinkToPdf": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "LibWkHtmlToX-32": {
+              "target": "Package",
+              "version": "[0.12.6.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
