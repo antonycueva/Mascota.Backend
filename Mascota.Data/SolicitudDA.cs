@@ -2308,7 +2308,7 @@ namespace Mascota
                 {
                     cmd.CommandText = "pkg_mascotaweb.usp_registrar_certificacion";
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new OracleParameter("P_ID", solicitud.id));
+                    cmd.Parameters.Add(new OracleParameter("P_ID", solicitud.id)); 
                     cmd.Parameters.Add(new OracleParameter("P_ESTADO", solicitud.estado));
                     cmd.Parameters.Add(new OracleParameter("P_COMENTARIO_REVISION", solicitud.comentario_revision));
                     cmd.Parameters.Add(new OracleParameter("P_USER_APR", solicitud.user_apro));
