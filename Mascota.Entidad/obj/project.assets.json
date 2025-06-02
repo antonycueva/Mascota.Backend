@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dicka\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\tecnico7_uie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
+      "projectUniqueName": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
       "projectName": "Mascota.Entidad",
-      "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
-      "packagesPath": "C:\\Users\\dicka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\obj\\",
+      "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
+      "packagesPath": "C:\\Users\\tecnico7_uie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\dicka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\tecnico7_uie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -50,8 +46,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -72,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

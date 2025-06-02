@@ -1328,7 +1328,55 @@ namespace Mascota
                     }
                     catch (Exception ex)
                     {
-                        Logger.registrar_linea("listar_documento", ex.Message.ToString());
+                        Logger.registrar_linea("listar_documento2", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return lista;
+        }
+
+        public List<solicitud_inspeccion_relacion_documentoBE> listar_documento_espec_sen(int id_solicitud)
+        {
+            List<solicitud_inspeccion_relacion_documentoBE> lista = new List<solicitud_inspeccion_relacion_documentoBE>();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_listar_documento_espec_sen";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID_SIE_CAB", id_solicitud));
+                    //cmd.Parameters.Add(new OracleParameter("P_TIPO_DOCUMENTO", tipo_documento));
+                    cmd.Parameters.Add(new OracleParameter("P_CURSOR", OracleDbType.RefCursor, ParameterDirection.Output));
+
+                    try
+                    {
+                        conx.Open();
+                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                solicitud_inspeccion_relacion_documentoBE item = new solicitud_inspeccion_relacion_documentoBE();
+                                item.id = helperDA.GetInteger(reader, "id");
+                                item.nomb_documento = helperDA.GetString(reader, "NOMB_DOCUMENTO");
+                                item.desc_documento = helperDA.GetString(reader, "DESC_DOCUMENTO");
+                                item.condicion = helperDA.GetString(reader, "CONDICION");
+                                item.info_documento = helperDA.GetString(reader, "INFO_DOCUMENTO");
+                                item.estado = helperDA.GetString(reader, "estado");
+                                item.fecha = helperDA.GetString(reader, "fecha");
+                                item.id_sie_doc_det = helperDA.GetInteger(reader, "id_sie_doc_det");
+                                lista.Add(item);
+                            }
+                        }
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.registrar_linea("listar_documento_espec_sen", ex.Message.ToString());
                     }
                     finally
                     {
@@ -2313,10 +2361,6 @@ namespace Mascota
                     cmd.Parameters.Add(new OracleParameter("P_COMENTARIO_REVISION", solicitud.comentario_revision));
                     cmd.Parameters.Add(new OracleParameter("P_USER_APR", solicitud.user_apro));
                     cmd.Parameters.Add(new OracleParameter("P_CODIGO_CERTIFICADO", solicitud.codigo_certificado));
-                    cmd.Parameters.Add(new OracleParameter("P_DOCUMENTO_TIPO_EXPO", solicitud.documento_tipo_expo));
-                    cmd.Parameters.Add(new OracleParameter("P_NOMBRE_EXPORTADOR", solicitud.nombre_exportador));
-                    cmd.Parameters.Add(new OracleParameter("P_DIRECCION_EXPORTADOR", solicitud.direccion_exportador));
-                    cmd.Parameters.Add(new OracleParameter("P_NUM_DOC_EXPORTADOR", solicitud.num_doc_exportador));
                     cmd.Parameters.Add(new OracleParameter("P_DESC_CERTIFICADO_EXPO", solicitud.desc_certificado_expo));
                     cmd.Parameters.Add(new OracleParameter("P_OBSERVACION_CERTIFICADO_EXPO", solicitud.observacion_certificado_expo));
                     cmd.Parameters.Add(new OracleParameter("P_MEDIDA_SANITARIA_CERT", solicitud.medida_sanitaria_cert));
@@ -2336,6 +2380,7 @@ namespace Mascota
                     cmd.Parameters.Add(new OracleParameter("P_w_parasitos_internos", solicitud.w_parasitos_internos));
                     cmd.Parameters.Add(new OracleParameter("P_w_apto_certificacion", solicitud.w_apto_certificacion));
                     cmd.Parameters.Add(new OracleParameter("P_USER_MODI", solicitud.user_modi));
+                    cmd.Parameters.Add(new OracleParameter("P_ESTADO_CERT", solicitud.estado_cert));
 
                     try
                     {
@@ -2499,6 +2544,15 @@ namespace Mascota
                                 item.fecha_revisor = helperDA.GetString(reader, "fecha_revisor");
                                 item.fecha_especialista = helperDA.GetString(reader, "fecha_especialista");
                                 item.fecha_medico = helperDA.GetString(reader, "fecha_medico");
+
+                                item.codigo_certificado = helperDA.GetString(reader, "CODIGO_CERTIFICADO");
+                                item.desc_certificado_expo = helperDA.GetString(reader, "DESC_CERTIFICADO_EXPO");
+                                item.observacion_certificado_expo = helperDA.GetString(reader, "OBSERVACION_CERTIFICADO_EXPO");
+                                item.medida_sanitaria_cert = helperDA.GetString(reader, "MEDIDA_SANITARIA_CERT");
+                                item.idioma_cert = helperDA.GetString(reader, "IDIOMA_CERT");
+                                item.estado_cert = helperDA.GetString(reader, "ESTADO_CERT");
+
+
 
                             }
                         }

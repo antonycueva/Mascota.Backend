@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj": {}
+    "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj": {
+    "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj",
+        "projectUniqueName": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj",
         "projectName": "Mascota.Data",
-        "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj",
-        "packagesPath": "C:\\Users\\dicka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\obj\\",
+        "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj",
+        "packagesPath": "C:\\Users\\tecnico7_uie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dicka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\tecnico7_uie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,17 +22,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
-                "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj"
+              "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
+                "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj"
               },
-              "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj": {
-                "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj"
+              "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj": {
+                "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj"
               }
             }
           }
@@ -50,8 +47,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -78,25 +74,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
+    "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
+        "projectUniqueName": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
         "projectName": "Mascota.Entidad",
-        "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
-        "packagesPath": "C:\\Users\\dicka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\obj\\",
+        "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj",
+        "packagesPath": "C:\\Users\\tecnico7_uie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dicka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\tecnico7_uie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,6 +96,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -121,8 +114,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -143,25 +135,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj": {
+    "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj",
+        "projectUniqueName": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj",
         "projectName": "Mascota.Logica",
-        "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj",
-        "packagesPath": "C:\\Users\\dicka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Logica\\obj\\",
+        "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj",
+        "packagesPath": "C:\\Users\\tecnico7_uie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dicka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\tecnico7_uie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -169,17 +157,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj": {
-                "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj"
+              "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj": {
+                "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\Mascota.Data.csproj"
               },
-              "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
-                "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj"
+              "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
+                "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj"
               }
             }
           }
@@ -193,8 +182,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -225,25 +213,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj": {
+    "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj",
+        "projectUniqueName": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj",
         "projectName": "Mascota.Utilidad",
-        "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj",
-        "packagesPath": "C:\\Users\\dicka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\obj\\",
+        "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj",
+        "packagesPath": "C:\\Users\\tecnico7_uie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dicka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\tecnico7_uie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -251,6 +235,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -268,8 +253,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -304,25 +288,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj": {
+    "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj",
         "projectName": "Mascota.WebApi",
-        "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj",
-        "packagesPath": "C:\\Users\\dicka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.WebApi\\obj\\",
+        "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.csproj",
+        "packagesPath": "C:\\Users\\tecnico7_uie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dicka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\tecnico7_uie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -330,20 +310,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
-                "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj"
+              "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj": {
+                "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\Mascota.Entidad.csproj"
               },
-              "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj": {
-                "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj"
+              "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj": {
+                "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\Mascota.Logica.csproj"
               },
-              "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj": {
-                "projectPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj"
+              "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj": {
+                "projectPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Utilidad\\Mascota.Utilidad.csproj"
               }
             }
           }
@@ -357,8 +338,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -424,7 +404,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

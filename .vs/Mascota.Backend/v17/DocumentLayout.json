@@ -1,29 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\",
   "Documents": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{70153CEA-C17F-4BDC-8971-2975340C7505}|Mascota.Data\\Mascota.Data.csproj|c:\\users\\dicka\\desktop\\mascotas senasa\\mascota.backend\\mascota.data\\solicitudda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.webapi\\controllers\\solicitudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|solutionrelative:mascota.webapi\\controllers\\solicitudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{651DD885-6DE3-4B92-8D8E-B0929575947C}|Mascota.Logica\\Mascota.Logica.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.logica\\solicitudbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{651DD885-6DE3-4B92-8D8E-B0929575947C}|Mascota.Logica\\Mascota.Logica.csproj|solutionrelative:mascota.logica\\solicitudbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{70153CEA-C17F-4BDC-8971-2975340C7505}|Mascota.Data\\Mascota.Data.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.data\\solicitudda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70153CEA-C17F-4BDC-8971-2975340C7505}|Mascota.Data\\Mascota.Data.csproj|solutionrelative:mascota.data\\solicitudda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-=======
->>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
-      "AbsoluteMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.webapi\\controllers\\informeriivcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|solutionrelative:mascota.webapi\\controllers\\informeriivcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|solutionrelative:mascota.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.webapi\\mascota.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|solutionrelative:mascota.webapi\\mascota.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-<<<<<<< HEAD
->>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
-=======
->>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
+      "AbsoluteMoniker": "D:0:0:{6BB495E3-EFCC-49CC-A71B-2A416F6A8ED3}|Mascota.Entidad\\Mascota.Entidad.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.entidad\\solicitud_inspeccion_expo_cab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BB495E3-EFCC-49CC-A71B-2A416F6A8ED3}|Mascota.Entidad\\Mascota.Entidad.csproj|solutionrelative:mascota.entidad\\solicitud_inspeccion_expo_cab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,27 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-<<<<<<< HEAD
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SolicitudDA.cs",
-              "DocumentMoniker": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\SolicitudDA.cs",
-              "RelativeDocumentMoniker": "Mascota.Data\\SolicitudDA.cs",
-              "ToolTip": "C:\\Users\\dicka\\Desktop\\MASCOTAS SENASA\\Mascota.Backend\\Mascota.Data\\SolicitudDA.cs*",
-              "RelativeToolTip": "Mascota.Data\\SolicitudDA.cs*",
-              "ViewState": "AgIAAPkIAAAAAAAAAAAAAPwIAAAyAAAAAAAAAA==",
+              "Title": "SolicitudController.cs",
+              "DocumentMoniker": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Controllers\\SolicitudController.cs",
+              "RelativeDocumentMoniker": "Mascota.WebApi\\Controllers\\SolicitudController.cs",
+              "ToolTip": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Controllers\\SolicitudController.cs",
+              "RelativeToolTip": "Mascota.WebApi\\Controllers\\SolicitudController.cs",
+              "ViewState": "AQIAAOUAAAAAAAAAAAAwwP0AAABqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T01:18:23.149Z",
+              "WhenOpened": "2025-06-02T21:02:26.418Z",
               "EditorCaption": ""
-=======
-=======
->>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
-          "SelectedChildIndex": 8,
-          "Children": [
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -88,41 +75,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InformeRiivController.cs",
-              "DocumentMoniker": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Controllers\\InformeRiivController.cs",
-              "RelativeDocumentMoniker": "Mascota.WebApi\\Controllers\\InformeRiivController.cs",
-              "ToolTip": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Controllers\\InformeRiivController.cs",
-              "RelativeToolTip": "Mascota.WebApi\\Controllers\\InformeRiivController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAFAAAA",
+              "DocumentIndex": 1,
+              "Title": "SolicitudBL.cs",
+              "DocumentMoniker": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\SolicitudBL.cs",
+              "RelativeDocumentMoniker": "Mascota.Logica\\SolicitudBL.cs",
+              "ToolTip": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Logica\\SolicitudBL.cs",
+              "RelativeToolTip": "Mascota.Logica\\SolicitudBL.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAgwH0AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T20:29:56.341Z",
+              "WhenOpened": "2025-06-02T19:35:18.541Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Mascota.WebApi\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Mascota.WebApi\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-29T20:25:19.476Z",
+              "DocumentIndex": 3,
+              "Title": "solicitud_inspeccion_expo_cab.cs",
+              "DocumentMoniker": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\solicitud_inspeccion_expo_cab.cs",
+              "RelativeDocumentMoniker": "Mascota.Entidad\\solicitud_inspeccion_expo_cab.cs",
+              "ToolTip": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Entidad\\solicitud_inspeccion_expo_cab.cs",
+              "RelativeToolTip": "Mascota.Entidad\\solicitud_inspeccion_expo_cab.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAA1wG0AAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T16:13:31.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Mascota.WebApi.http",
-              "DocumentMoniker": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.http",
-              "RelativeDocumentMoniker": "Mascota.WebApi\\Mascota.WebApi.http",
-              "ToolTip": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.WebApi\\Mascota.WebApi.http",
-              "RelativeToolTip": "Mascota.WebApi\\Mascota.WebApi.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-05-29T20:24:01.716Z",
+              "Title": "SolicitudDA.cs",
+              "DocumentMoniker": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\SolicitudDA.cs",
+              "RelativeDocumentMoniker": "Mascota.Data\\SolicitudDA.cs",
+              "ToolTip": "C:\\Users\\tecnico7_uie\\Desktop\\MASCOTAS FINAL\\SenasaAppMascota\\Mascota.Backend\\Mascota.Data\\SolicitudDA.cs",
+              "RelativeToolTip": "Mascota.Data\\SolicitudDA.cs",
+              "ViewState": "AQIAADsFAAAAAAAAAAAIwFYFAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T14:16:38.363Z",
               "EditorCaption": ""
             }
           ]
@@ -138,7 +125,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
->>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
             }
           ]
         }

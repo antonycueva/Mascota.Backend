@@ -2,16 +2,19 @@ C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Ma
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\appsettings.json
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Connected Services\wsReniec\ConnectedService.json
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\libwkhtmltox.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Mascota.WebApi.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Mascota.WebApi.deps.json
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Mascota.WebApi.runtimeconfig.json
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Mascota.WebApi.pdb
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\DinkToPdf.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.WsTrust.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.Saml.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Xml.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Oracle.ManagedDataAccess.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll

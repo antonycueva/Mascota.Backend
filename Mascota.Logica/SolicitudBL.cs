@@ -121,6 +121,10 @@ namespace Mascota
         {
             return new solicitudDA(conn).listar_documento2(id_solicitud);
         }
+        public static List<solicitud_inspeccion_relacion_documentoBE> listar_documento_espec_sen(int id_solicitud)
+        {
+            return new solicitudDA(conn).listar_documento_espec_sen(id_solicitud);
+        }
         public static List<solicitud_inspeccion_expoBE> listar_solicitud(int situacion, string? estado, string? codigo, string? tipo_usuario)
         {
             return new solicitudDA(conn).listar_solicitud(situacion, estado, codigo, tipo_usuario);

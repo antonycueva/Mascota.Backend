@@ -248,6 +248,14 @@ namespace Mascota.WebApi.Controllers
         }
 
         [HttpGet]
+        [Route("documento/listar_documento_espec_sen")]
+        public List<solicitud_inspeccion_relacion_documentoBE> listar_documento_espec_sen(int id_solicitud)
+        {
+            List<solicitud_inspeccion_relacion_documentoBE> lista = solicitudBL.listar_documento_espec_sen(id_solicitud);
+            return lista;
+        }
+
+        [HttpGet]
         [Route("certificado/listar")]
         public List<certificado> listar_certificado_cab(int id_solicitud)
         {
