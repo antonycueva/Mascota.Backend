@@ -1,0 +1,5724 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Mascota.WebApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/documento/upload": {
+      "post": {
+        "tags": [
+          "Documento"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/documento/download": {
+      "get": {
+        "tags": [
+          "Documento"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_doc_det",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/recibo/upload": {
+      "post": {
+        "tags": [
+          "Documento"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/recibo/download": {
+      "get": {
+        "tags": [
+          "Documento"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_rec",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/seguridad/login": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.app_usuarioBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.app_usuarioBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.app_usuarioBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.usuarioBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.usuarioBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.usuarioBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/tipo_documento/listar": {
+      "get": {
+        "tags": [
+          "Seguridad"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipos_documentos_identidadBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipos_documentos_identidadBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipos_documentos_identidadBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/persona/listar": {
+      "get": {
+        "tags": [
+          "Seguridad"
+        ],
+        "parameters": [
+          {
+            "name": "documento_tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "documento_numero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tipo_usuario",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.personaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.personaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.personaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/veterinario/listar": {
+      "get": {
+        "tags": [
+          "Seguridad"
+        ],
+        "parameters": [
+          {
+            "name": "documento_tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "documento_numero",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/senasa/listar": {
+      "get": {
+        "tags": [
+          "Seguridad"
+        ],
+        "parameters": [
+          {
+            "name": "codsed",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "modalidad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.personaBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.personaBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.personaBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/usuario/registrar": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/persona/registrar": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.personaBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.personaBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.personaBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/usuario/recuperar": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/datos/acceso": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/seguridad/datos/contacto": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.usuarioBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "situacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "estado",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "codigo",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "tipo_usuario",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_expoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_expoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_expoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/departamento/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.departamentoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.departamentoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.departamentoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/provincia/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "codi_depa_dpt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.provinciaBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.provinciaBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.provinciaBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/distrito/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "codi_depa_dpt",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "codi_prov_tpr",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.distritoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.distritoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.distritoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/importadores/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "pais",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "00"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.importadoresBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.importadoresBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.importadoresBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/animal/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/medico/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "nombre",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "id_marca",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "codi_depa_dpt",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "codi_prov_tpr",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          },
+          {
+            "name": "codi_dist_tdi",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/recibo_pago/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/paises_origen/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.paisesBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.paisesBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.paisesBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/paises_destino/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.paisesBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.paisesBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.paisesBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/uso_destino/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.aplicacion_usoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.aplicacion_usoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.aplicacion_usoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/medio_transporte/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.medio_transporteBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.medio_transporteBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.medio_transporteBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/punto_salida/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "medio_transporte",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.puertoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.puertoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.puertoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/punto_llegada/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "pais_destino",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "medio_transporte",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.puertoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.puertoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.puertoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/lugar_inspeccion/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.lugar_inspeccionBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.lugar_inspeccionBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.lugar_inspeccionBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/direccion_ejecutiva/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.sedeBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.sedeBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.sedeBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/centro_tramite/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "codi_sede_sed",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.centro_tramite"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.centro_tramite"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.centro_tramite"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/especie/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.productoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.productoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.productoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/unidad_medida/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.unidad_medidaBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.unidad_medidaBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.unidad_medidaBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/tipo_envase/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipo_envaseBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipo_envaseBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipo_envaseBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/clase/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.claseBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.claseBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.claseBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/area/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "codigo_clase",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.area_gestionBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.area_gestionBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.area_gestionBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/procedimiento/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.procedimiento_tupaBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.procedimiento_tupaBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.procedimiento_tupaBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/concepto_pago/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "codigo_area",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id_marca_inspeccion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.concepto_pagoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.concepto_pagoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.concepto_pagoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/info_banco/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.bancoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.bancoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.bancoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/tipo_pago/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipo_pagoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipo_pagoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.tipo_pagoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/banco/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.bancoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.bancoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.bancoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/cuenta_corriente/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "codigo_banco",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.cuenta_corrienteBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.cuenta_corrienteBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.cuenta_corrienteBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/documento/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "tipo_documento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_relacion_documentoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_relacion_documentoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_relacion_documentoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/documento/listar2": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_relacion_documentoBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_relacion_documentoBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_relacion_documentoBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/certificado/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.Entidad.certificado"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.Entidad.certificado"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.Entidad.certificado"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/certificadoDet/listar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.Entidad.certificado_detBE"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.Entidad.certificado_detBE"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Mascota.Entidad.certificado_detBE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/exportador/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/importador/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/envio/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/animal/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/animal/editar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/animal/anular": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_detBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/animal/registrar2": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/medico/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/recibo/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/recibo/editar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/recibo/anular": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_insepccion_expo_recibo_pagoBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/recibo/pago": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/documento/registrar2": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_expo_doc_adj_detBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_expo_doc_adj_detBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.solicitud_inspeccion_expo_doc_adj_detBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/documento/registrar3": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/asignacion_solicitud/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/revision_solicitud/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/revision_solicitud/enviar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/revision_senasa/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/certificacion/registrar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/replicar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/importador/registrar2": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.importadoresBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.importadoresBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.importadoresBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/recuperar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_solicitud",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/exportador/recuperar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_cab",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.personaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.personaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.personaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/importador/recuperar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_cab",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.importadoresBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.importadoresBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.importadoresBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/envio/recuperar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_cab",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/medico/recuperar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_cab",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.medico_veterinario_padronBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/pago/recuperar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_cab",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.solicitud_inspeccion_expo_cabBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/comprobante/recuperar": {
+      "get": {
+        "tags": [
+          "Solicitud"
+        ],
+        "parameters": [
+          {
+            "name": "id_sie_cab",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.comprobante"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.comprobante"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.Entidad.comprobante"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/asignacion_solicitud/reservar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/asignacion_solicitud/liberar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/solicitud/medico/liberar": {
+      "post": {
+        "tags": [
+          "Solicitud"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Mascota.Entidad.solicitud_asignacionBE"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mascota.respuestaBE"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Mascota.Entidad.certificado": {
+        "type": "object",
+        "properties": {
+          "numero_expediente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_exportador": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion_exportador": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_transito": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_destino": {
+            "type": "string",
+            "nullable": true
+          },
+          "medio_transporte": {
+            "type": "string",
+            "nullable": true
+          },
+          "punto_salida": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_embarque": {
+            "type": "string",
+            "nullable": true
+          },
+          "punto_llegada": {
+            "type": "string",
+            "nullable": true
+          },
+          "uso_destino": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "hora_inspe": {
+            "type": "string",
+            "nullable": true
+          },
+          "requiere_tratamiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "requiere_analisis_lab": {
+            "type": "string",
+            "nullable": true
+          },
+          "medida_sanitaria_cert": {
+            "type": "string",
+            "nullable": true
+          },
+          "puesto_control_salida": {
+            "type": "string",
+            "nullable": true
+          },
+          "cumple_req_pais_des": {
+            "type": "string",
+            "nullable": true
+          },
+          "cumple_exg_senasa": {
+            "type": "string",
+            "nullable": true
+          },
+          "apto_cert": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.Entidad.certificado_detBE": {
+        "type": "object",
+        "properties": {
+          "especie": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "identificacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "raza": {
+            "type": "string",
+            "nullable": true
+          },
+          "sexo": {
+            "type": "string",
+            "nullable": true
+          },
+          "edad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.Entidad.comprobante": {
+        "type": "object",
+        "properties": {
+          "recibo": {
+            "type": "string",
+            "nullable": true
+          },
+          "expediente": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruc_usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_envio": {
+            "type": "string",
+            "nullable": true
+          },
+          "total_monto": {
+            "type": "string",
+            "nullable": true
+          },
+          "total_pagado": {
+            "type": "string",
+            "nullable": true
+          },
+          "aplicativo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.Entidad.solicitud_asignacionBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "user_modi": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.Entidad.solicitud_inspeccion_expo_cabBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "anno": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodexp": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_probl_inspe": {
+            "type": "string",
+            "nullable": true
+          },
+          "hora_inspe": {
+            "type": "string",
+            "nullable": true
+          },
+          "minuto_inspe": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_embarque": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_desembarque": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_clase": {
+            "type": "string",
+            "nullable": true
+          },
+          "cod_usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_aplicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_origen_codi_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_transito_codi_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_destino_codi_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_medio_transporte": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodsed": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_puerto_salida": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_lugar_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_procedimiento_tupa": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_area_gestion": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_expediente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "ciudad_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "nume_regi_arc_veter": {
+            "type": "string",
+            "nullable": true
+          },
+          "nume_regi_arc_senasa": {
+            "type": "string",
+            "nullable": true
+          },
+          "nume_regi_arc": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_puerto_llegada": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_servicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_centro_tramite": {
+            "type": "string",
+            "nullable": true
+          },
+          "user_crea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user_modi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user_apro": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "comentario_revision": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_marca_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "situacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "w_certificado_vacunacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_certificado_salud": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_recibo_pago": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_constancia_microchip": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_documentos_laboratorio": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_requisito_sanitario": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_temperatura": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_frecuencia_cardiaca": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_frecuencia_respiratoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_color_mucosas": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_heridas": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_parasitos_externos": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_parasitos_internos": {
+            "type": "string",
+            "nullable": true
+          },
+          "w_apto_certificacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_origen_nomb_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_transito_nomb_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_destino_nomb_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_medio_transporte": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_aplicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_puerto_salida": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_puerto_llegada": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_lugar_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc_sede_sed": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_centro_tramite": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_persona": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion_persona": {
+            "type": "string",
+            "nullable": true
+          },
+          "departamento_persona": {
+            "type": "string",
+            "nullable": true
+          },
+          "provincia_persona": {
+            "type": "string",
+            "nullable": true
+          },
+          "distrito_persona": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_documento_persona": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo_documento_persona": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo_contacto": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono_contacto": {
+            "type": "string",
+            "nullable": true
+          },
+          "apel_pate_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "apel_mate_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "seud_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "dire_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_cort_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_cmvp_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_documento_medico": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_empl_ctd": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_empl_rev": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_empl_esp": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_empl_ctd": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_empl_rev": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_empl_esp": {
+            "type": "string",
+            "nullable": true
+          },
+          "usu_empl_ctd": {
+            "type": "string",
+            "nullable": true
+          },
+          "usu_empl_rev": {
+            "type": "string",
+            "nullable": true
+          },
+          "usu_empl_esp": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_revisor": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_especialista": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_medico": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_certificado": {
+            "type": "string",
+            "nullable": true
+          },
+          "documento_tipo_expo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_exportador": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion_exportador": {
+            "type": "string",
+            "nullable": true
+          },
+          "num_doc_exportador": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc_certificado_expo": {
+            "type": "string",
+            "nullable": true
+          },
+          "observacion_certificado_expo": {
+            "type": "string",
+            "nullable": true
+          },
+          "medida_sanitaria_cert": {
+            "type": "string",
+            "nullable": true
+          },
+          "idioma_cert": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.aplicacion_usoBE": {
+        "type": "object",
+        "properties": {
+          "codigo_aplicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_aplicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_clase": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.app_personaBE": {
+        "type": "object",
+        "properties": {
+          "persona_tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "persona_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_razon_social": {
+            "type": "string",
+            "nullable": true
+          },
+          "documento_tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "documento_numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido_paterno": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido_materno": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombres": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruc": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo_electronico": {
+            "type": "string",
+            "nullable": true
+          },
+          "departamento_nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "provincia_nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "distrito_nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_docu_ide": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono_movil": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.app_usuarioBE": {
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "clave": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.area_gestionBE": {
+        "type": "object",
+        "properties": {
+          "codigo_area_gestion": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_area_gestion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.bancoBE": {
+        "type": "object",
+        "properties": {
+          "codigo_banco": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_banco": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_cuenta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.centro_tramite": {
+        "type": "object",
+        "properties": {
+          "codigo_centro_tramite": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_centro_tramite": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.claseBE": {
+        "type": "object",
+        "properties": {
+          "codigo_clase": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_clase": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.concepto_pagoBE": {
+        "type": "object",
+        "properties": {
+          "codigo_servicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_servicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "tarifa": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.cuenta_corrienteBE": {
+        "type": "object",
+        "properties": {
+          "codigo_cta_cte": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_cta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.departamentoBE": {
+        "type": "object",
+        "properties": {
+          "codi_depa_dpt": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_dpto_dpt": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.distritoBE": {
+        "type": "object",
+        "properties": {
+          "codi_dist_tdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_depa_dpt": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_prov_tpr": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_dist_tdi": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.importadoresBE": {
+        "type": "object",
+        "properties": {
+          "codigo_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "ciudad_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "check": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.lugar_inspeccionBE": {
+        "type": "object",
+        "properties": {
+          "codigo_lugar_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_lugar_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion_lugar_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "persona_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "persona_sucursal_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_centro_tramite": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_insp_adicional": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodsed": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.medico_veterinario_padronBE": {
+        "type": "object",
+        "properties": {
+          "codi_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_cmvp_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_sede_sed": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_empl_per": {
+            "type": "string",
+            "nullable": true
+          },
+          "apel_pate_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "apel_mate_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "seud_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "dire_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_depa_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_prov_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_dist_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "loc_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo_docu_ide": {
+            "type": "string",
+            "nullable": true
+          },
+          "nume_docu_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruc_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "telf_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "celu_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "email_medi_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_cort_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "esta_esta_mv": {
+            "type": "string",
+            "nullable": true
+          },
+          "flag_prof_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "feex_ceha_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "feve_ceha_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "esta_cert_hab": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_prof_sen": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado_autorizado": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_autorizado": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_expediente_autorizado": {
+            "type": "string",
+            "nullable": true
+          },
+          "flag_planta_incubacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "flag_granja": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_depa_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_prov_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_dist_vet": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_marca_inspeccion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.medio_transporteBE": {
+        "type": "object",
+        "properties": {
+          "codigo_medio_transporte": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_medio_transporte": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.menuBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "label": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "string",
+            "nullable": true
+          },
+          "isTitle": {
+            "type": "boolean"
+          },
+          "subItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Mascota.paginaBE"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.paginaBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "label": {
+            "type": "string",
+            "nullable": true
+          },
+          "link": {
+            "type": "string",
+            "nullable": true
+          },
+          "parentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "visible": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.paisesBE": {
+        "type": "object",
+        "properties": {
+          "codi_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_pais_tpa": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "ind_bpm": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_pais_reg": {
+            "type": "string",
+            "nullable": true
+          },
+          "nom_pais_old": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefac": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.personaBE": {
+        "type": "object",
+        "properties": {
+          "codi_usua_usu": {
+            "type": "string",
+            "nullable": true
+          },
+          "persona_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_razon_social": {
+            "type": "string",
+            "nullable": true
+          },
+          "persona_tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "documento_tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "documento_numero": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_docu_ide": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido_paterno": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido_materno": {
+            "type": "string",
+            "nullable": true
+          },
+          "ruc": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombres": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "departamento_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "provincia_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "distrito_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "departamento_nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "provincia_nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "distrito_nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "centro_poblado_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono_movil": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo_electronico": {
+            "type": "string",
+            "nullable": true
+          },
+          "referencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_nacimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_razsoc_comp": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_comercial": {
+            "type": "string",
+            "nullable": true
+          },
+          "referencia_direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado_natural": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado_juridico": {
+            "type": "string",
+            "nullable": true
+          },
+          "sexo": {
+            "type": "string",
+            "nullable": true
+          },
+          "deResultado": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_sie_user": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.procedimiento_tupaBE": {
+        "type": "object",
+        "properties": {
+          "codigo_procedimiento_tupa": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_procedimiento_tupa": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.productoBE": {
+        "type": "object",
+        "properties": {
+          "codigo_producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_producto_presentacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_partida_arancelaria": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_comercial_producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_clase": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_cientifico_producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_crf": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_cuarentena": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "periodo_vegetativo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_especie": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_inspecciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "espe_anim_ani": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_guardacustoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidad_muestra": {
+            "type": "string",
+            "nullable": true
+          },
+          "uso_importacion_exportacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_animal_vivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_germoplasma": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_atencion_cuarent": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_especie_comun": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidad_muestra_expo": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_control_biologico": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_especie_sinonimo": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_aep": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_muestra": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_plan_trabajo": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_ovm": {
+            "type": "string",
+            "nullable": true
+          },
+          "nume_regi_pro": {
+            "type": "string",
+            "nullable": true
+          },
+          "analisis_aletorio": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact_n1": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact_n2": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact_n3": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_verifica_producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "flag_cuarentena": {
+            "type": "string",
+            "nullable": true
+          },
+          "flag_inocuidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "flag_inspeccion_cobroanticipado": {
+            "type": "string",
+            "nullable": true
+          },
+          "indicador_semilla": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.provinciaBE": {
+        "type": "object",
+        "properties": {
+          "codi_depa_dpt": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_prov_tpr": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_prov_tpr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.puertoBE": {
+        "type": "object",
+        "properties": {
+          "codigo_puerto": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_puerto": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "ind_bpm": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_pais_reg": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_pais_old": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.respuestaBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "mensaje": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.sedeBE": {
+        "type": "object",
+        "properties": {
+          "ccodsed": {
+            "type": "string",
+            "nullable": true
+          },
+          "ctipsed": {
+            "type": "string",
+            "nullable": true
+          },
+          "cdessed": {
+            "type": "string",
+            "nullable": true
+          },
+          "cnivsup": {
+            "type": "string",
+            "nullable": true
+          },
+          "ctexto": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccoddep": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodprov": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccoddist": {
+            "type": "string",
+            "nullable": true
+          },
+          "cmedtra": {
+            "type": "string",
+            "nullable": true
+          },
+          "cprintcar": {
+            "type": "string",
+            "nullable": true
+          },
+          "cprintrec": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodsednew": {
+            "type": "string",
+            "nullable": true
+          },
+          "prefijo": {
+            "type": "string",
+            "nullable": true
+          },
+          "cestado": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_aduan": {
+            "type": "string",
+            "nullable": true
+          },
+          "cprintiiv": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodsed1": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_medio_transporte": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.solicitud_insepccion_expo_detBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "secuencial": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_sie_cab": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "especie": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_tipo_sexo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_tipo_sexo": {
+            "type": "string",
+            "nullable": true
+          },
+          "edad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codi_unid_med": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc_unid_med": {
+            "type": "string",
+            "nullable": true
+          },
+          "raza": {
+            "type": "string",
+            "nullable": true
+          },
+          "identificacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo_tipo_envase": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_tipo_envase": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_comercial_producto": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "microchip": {
+            "type": "string",
+            "nullable": true
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "pais_destino": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.solicitud_insepccion_expo_recibo_pagoBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "secuencial": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo_tipo_pago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion_tipo_pago": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_banco": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_banco": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_cta_cte": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_cta_cte": {
+            "type": "string",
+            "nullable": true
+          },
+          "num_boleta_depo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_depo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_depo2": {
+            "type": "string",
+            "nullable": true
+          },
+          "monto": {
+            "type": "number",
+            "format": "double"
+          },
+          "id_sie_cab": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataobject": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.solicitud_inspeccion_expoBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre_exportador": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_medico": {
+            "type": "string",
+            "nullable": true
+          },
+          "situacion": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_paso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "secuencia_paso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre_paso": {
+            "type": "string",
+            "nullable": true
+          },
+          "componente_paso": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_situacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_embarque": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_desembarque": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_pais_origen": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_pais_transito": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_pais_destino": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_medio_transporte": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado_solicitud": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_solicitud": {
+            "type": "string",
+            "nullable": true
+          },
+          "cmvp_medico": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_exportador": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_importador": {
+            "type": "string",
+            "nullable": true
+          },
+          "comentario_revision": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_marca_inspeccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_formato": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_crea_formato": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_modi_formato": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_apro_formato": {
+            "type": "string",
+            "nullable": true
+          },
+          "fech_cert_formato": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_revisor": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_especialista": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario_revisor": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario_especialista": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_revisor": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_especialista": {
+            "type": "string",
+            "nullable": true
+          },
+          "numero_expediente": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.solicitud_inspeccion_expo_doc_adj_detBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_sie_cab": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_rel_doc": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nume_regi_arc": {
+            "type": "string",
+            "nullable": true
+          },
+          "secuencial": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fech_carg_arc": {
+            "type": "string",
+            "nullable": true
+          },
+          "filename": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileextension": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_objeto": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fuente": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataobject": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "numerodocumento_ucm": {
+            "type": "string",
+            "nullable": true
+          },
+          "user_crea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user_modi": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.solicitud_inspeccion_relacion_documentoBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nomb_documento": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc_documento": {
+            "type": "string",
+            "nullable": true
+          },
+          "info_documento": {
+            "type": "string",
+            "nullable": true
+          },
+          "condicion": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo_documento": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_sie_doc_det": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "origen": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.tipo_envaseBE": {
+        "type": "object",
+        "properties": {
+          "codigo_tipo_envase": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_tipo_envase": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_clase": {
+            "type": "string",
+            "nullable": true
+          },
+          "uso_importacion_exportacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "codi_tipo_env": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc_tipo_env": {
+            "type": "string",
+            "nullable": true
+          },
+          "analisis_aleatorio": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado_uncefact": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.tipo_pagoBE": {
+        "type": "object",
+        "properties": {
+          "codigo_tipo_pago": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion_tipo_pago": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.tipo_usuarioBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.tipos_documentos_identidadBE": {
+        "type": "object",
+        "properties": {
+          "tipo_docu_ide": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomb_docu_ide": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.unidad_medidaBE": {
+        "type": "object",
+        "properties": {
+          "codi_unid_med": {
+            "type": "string",
+            "nullable": true
+          },
+          "desc_unid_med": {
+            "type": "string",
+            "nullable": true
+          },
+          "esta_unid_med": {
+            "type": "string",
+            "nullable": true
+          },
+          "cundmed": {
+            "type": "string",
+            "nullable": true
+          },
+          "cdesundmed": {
+            "type": "string",
+            "nullable": true
+          },
+          "cabrundmed": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodcla": {
+            "type": "string",
+            "nullable": true
+          },
+          "ccodcla1": {
+            "type": "string",
+            "nullable": true
+          },
+          "cdescri": {
+            "type": "string",
+            "nullable": true
+          },
+          "cdesundmedeng": {
+            "type": "string",
+            "nullable": true
+          },
+          "bpm": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigo_uncefact": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Mascota.usuarioBE": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "clave": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo_usuario": {
+            "$ref": "#/components/schemas/Mascota.tipo_usuarioBE"
+          },
+          "fecha_crea": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fecha_modi": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "persona": {
+            "$ref": "#/components/schemas/Mascota.app_personaBE"
+          },
+          "lista_permiso": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Mascota.menuBE"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

@@ -159,7 +159,10 @@
       },
       "Mascota.Entidad/1.0.0": {
         "runtime": {
-          "Mascota.Entidad.dll": {}
+          "Mascota.Entidad.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Mascota.Utilidad/1.0.0": {
@@ -169,7 +172,10 @@
           "Oracle.ManagedDataAccess.Core": "23.4.0"
         },
         "runtime": {
-          "Mascota.Utilidad.dll": {}
+          "Mascota.Utilidad.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

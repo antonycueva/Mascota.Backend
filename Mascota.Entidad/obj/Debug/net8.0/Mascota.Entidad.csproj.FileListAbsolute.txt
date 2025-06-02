@@ -34,3 +34,15 @@ C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Ma
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\refint\Mascota.Entidad.dll
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.pdb
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\ref\Mascota.Entidad.dll
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\bin\Debug\net8.0\Mascota.Entidad.deps.json
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\bin\Debug\net8.0\Mascota.Entidad.dll
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\bin\Debug\net8.0\Mascota.Entidad.pdb
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.AssemblyInfoInputs.cache
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.AssemblyInfo.cs
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.csproj.CoreCompileInputs.cache
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.sourcelink.json
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.dll
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\refint\Mascota.Entidad.dll
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\Mascota.Entidad.pdb
+C:\Users\dicka\Desktop\MASCOTAS SENASA\Mascota.Backend\Mascota.Entidad\obj\Debug\net8.0\ref\Mascota.Entidad.dll

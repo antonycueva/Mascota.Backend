@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mascota.Utilidad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15565c3709bb818d8799b0ee894254357747b9b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19df6e89e97aa5fcfd3601391ad7d1b77be98e50")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mascota.Utilidad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mascota.Utilidad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

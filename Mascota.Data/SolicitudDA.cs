@@ -2321,6 +2321,21 @@ namespace Mascota
                     cmd.Parameters.Add(new OracleParameter("P_OBSERVACION_CERTIFICADO_EXPO", solicitud.observacion_certificado_expo));
                     cmd.Parameters.Add(new OracleParameter("P_MEDIDA_SANITARIA_CERT", solicitud.medida_sanitaria_cert));
                     cmd.Parameters.Add(new OracleParameter("P_IDIOMA_CERT", solicitud.idioma_cert));
+                    cmd.Parameters.Add(new OracleParameter("P_w_certificado_vacunacion", solicitud.w_certificado_vacunacion));
+                    cmd.Parameters.Add(new OracleParameter("P_w_certificado_salud", solicitud.w_certificado_salud));
+                    cmd.Parameters.Add(new OracleParameter("P_w_recibo_pago", solicitud.w_recibo_pago));
+                    cmd.Parameters.Add(new OracleParameter("P_w_constancia_microchip", solicitud.w_constancia_microchip));
+                    cmd.Parameters.Add(new OracleParameter("P_w_documentos_laboratorio", solicitud.w_documentos_laboratorio));
+                    cmd.Parameters.Add(new OracleParameter("P_w_requisito_sanitario", solicitud.w_requisito_sanitario));
+                    cmd.Parameters.Add(new OracleParameter("P_w_temperatura", solicitud.w_temperatura));
+                    cmd.Parameters.Add(new OracleParameter("P_w_frecuencia_cardiaca", solicitud.w_frecuencia_cardiaca));
+                    cmd.Parameters.Add(new OracleParameter("P_w_frecuencia_respiratoria", solicitud.w_frecuencia_respiratoria));
+                    cmd.Parameters.Add(new OracleParameter("P_w_color_mucosas", solicitud.w_color_mucosas));
+                    cmd.Parameters.Add(new OracleParameter("P_w_heridas", solicitud.w_heridas));
+                    cmd.Parameters.Add(new OracleParameter("P_w_parasitos_externos", solicitud.w_parasitos_externos));
+                    cmd.Parameters.Add(new OracleParameter("P_w_parasitos_internos", solicitud.w_parasitos_internos));
+                    cmd.Parameters.Add(new OracleParameter("P_w_apto_certificacion", solicitud.w_apto_certificacion));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_MODI", solicitud.user_modi));
 
                     try
                     {

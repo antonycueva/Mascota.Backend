@@ -382,3 +382,6 @@ C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Ma
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\Mascota.WebApi.pdb
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\Mascota.WebApi.genruntimeconfig.cache
 C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\obj\Release\net8.0\ref\Mascota.WebApi.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\bin\Release\net8.0\libwkhtmltox.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\bin\Release\net8.0\DinkToPdf.dll
+C:\Users\tecnico7_uie\Desktop\MASCOTAS FINAL\SenasaAppMascota\Mascota.Backend\Mascota.WebApi\bin\Release\net8.0\Newtonsoft.Json.dll

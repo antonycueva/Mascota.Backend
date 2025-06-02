@@ -1,6 +1,7 @@
-
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using DinkToPdf;
+using DinkToPdf.Contracts;
 using Mascota;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options => { options.CustomSchemaIds(type => type.ToString()); });
+builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 builder.Services.AddCors();
+builder.Services.AddHttpClient();  // <-- Añadido
+builder.Services.AddLogging();  // <-- Añadido
 
 var app = builder.Build();
 var config = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: false).Build();
@@ -29,7 +33,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 
 app.UseAuthorization();
 
