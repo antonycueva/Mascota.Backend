@@ -4,9 +4,12 @@
   "Documents": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{70153CEA-C17F-4BDC-8971-2975340C7505}|Mascota.Data\\Mascota.Data.csproj|c:\\users\\dicka\\desktop\\mascotas senasa\\mascota.backend\\mascota.data\\solicitudda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70153CEA-C17F-4BDC-8971-2975340C7505}|Mascota.Data\\Mascota.Data.csproj|solutionrelative:mascota.data\\solicitudda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 =======
+=======
+>>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
       "AbsoluteMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.webapi\\controllers\\informeriivcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|solutionrelative:mascota.webapi\\controllers\\informeriivcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,6 +20,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|c:\\users\\tecnico7_uie\\desktop\\mascotas final\\senasaappmascota\\mascota.backend\\mascota.webapi\\mascota.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{EDD4C10B-D801-4A68-AB4A-83012BD8664B}|Mascota.WebApi\\Mascota.WebApi.csproj|solutionrelative:mascota.webapi\\mascota.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+<<<<<<< HEAD
+>>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
+=======
 >>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
     }
   ],
@@ -27,6 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
 <<<<<<< HEAD
           "SelectedChildIndex": 0,
           "Children": [
@@ -43,6 +50,8 @@
               "WhenOpened": "2025-06-02T01:18:23.149Z",
               "EditorCaption": ""
 =======
+=======
+>>>>>>> b9427f951e87397d9201a341d9e2e62092dbd8ea
           "SelectedChildIndex": 8,
           "Children": [
             {
