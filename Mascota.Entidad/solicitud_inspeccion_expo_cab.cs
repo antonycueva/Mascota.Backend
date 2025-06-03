@@ -102,6 +102,7 @@
         public string nomb_empl_ctd { get; set; } = string.Empty;
         public string nomb_empl_rev { get; set; } = string.Empty;
         public string nomb_empl_esp { get; set; } = string.Empty;
+        public string dni_esp { get; set; } = string.Empty;
         public string usu_empl_ctd { get; set; } = string.Empty;
         public string usu_empl_rev { get; set; } = string.Empty;
         public string usu_empl_esp { get; set; } = string.Empty;

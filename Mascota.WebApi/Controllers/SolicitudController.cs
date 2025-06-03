@@ -25,6 +25,7 @@ namespace Mascota.WebApi.Controllers
         {
             return solicitudBL.listar_departamento();
         }
+
         [HttpGet]
         [Route("provincia/listar")]
         public List<provinciaBE> listar_provincia(string? codi_depa_dpt)
@@ -255,6 +256,7 @@ namespace Mascota.WebApi.Controllers
             return lista;
         }
 
+
         [HttpGet]
         [Route("certificado/listar")]
         public List<certificado> listar_certificado_cab(int id_solicitud)
@@ -262,6 +264,7 @@ namespace Mascota.WebApi.Controllers
             List<certificado> lista = solicitudBL.listar_certificado_cab(id_solicitud);
             return lista;
         }
+
 
         [HttpGet]
         [Route("certificadoDet/listar")]
@@ -412,6 +415,7 @@ namespace Mascota.WebApi.Controllers
             respuestaBE data = solicitudBL.registrar_revision_senasa(input);
             return data;
         }
+
         [HttpPost]
         [Route("certificacion/registrar")]
         public respuestaBE registrar_certificacion(solicitud_inspeccion_expo_cabBE input)
@@ -419,6 +423,16 @@ namespace Mascota.WebApi.Controllers
             respuestaBE data = solicitudBL.registrar_certificacion(input);
             return data;
         }
+
+
+        [HttpPost]
+        [Route("certificacion/aprobar")]
+        public respuestaBE aprobar_certificacion_esp(solicitud_inspeccion_expo_cabBE input)
+        {
+            respuestaBE data = solicitudBL.aprobar_certificacion_esp(input);
+            return data;
+        }
+
         [HttpPost]
         [Route("replicar")]
         public respuestaBE replicar_solicitud(solicitud_inspeccion_expo_cabBE input)

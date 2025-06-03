@@ -2401,6 +2401,62 @@ namespace Mascota
             }
             return data;
         }
+
+        public respuestaBE aprobar_certificacion_esp(solicitud_inspeccion_expo_cabBE solicitud)
+        {
+            respuestaBE data = new respuestaBE();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_aprobar_certificacion";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID", solicitud.id));
+                    cmd.Parameters.Add(new OracleParameter("P_ESTADO", solicitud.estado));
+                    cmd.Parameters.Add(new OracleParameter("P_COMENTARIO_REVISION", solicitud.comentario_revision));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_APR", solicitud.user_apro));
+                    cmd.Parameters.Add(new OracleParameter("P_CODIGO_CERTIFICADO", solicitud.codigo_certificado));
+                    cmd.Parameters.Add(new OracleParameter("P_DESC_CERTIFICADO_EXPO", solicitud.desc_certificado_expo));
+                    cmd.Parameters.Add(new OracleParameter("P_OBSERVACION_CERTIFICADO_EXPO", solicitud.observacion_certificado_expo));
+                    cmd.Parameters.Add(new OracleParameter("P_MEDIDA_SANITARIA_CERT", solicitud.medida_sanitaria_cert));
+                    cmd.Parameters.Add(new OracleParameter("P_IDIOMA_CERT", solicitud.idioma_cert));
+                    cmd.Parameters.Add(new OracleParameter("P_w_certificado_vacunacion", solicitud.w_certificado_vacunacion));
+                    cmd.Parameters.Add(new OracleParameter("P_w_certificado_salud", solicitud.w_certificado_salud));
+                    cmd.Parameters.Add(new OracleParameter("P_w_recibo_pago", solicitud.w_recibo_pago));
+                    cmd.Parameters.Add(new OracleParameter("P_w_constancia_microchip", solicitud.w_constancia_microchip));
+                    cmd.Parameters.Add(new OracleParameter("P_w_documentos_laboratorio", solicitud.w_documentos_laboratorio));
+                    cmd.Parameters.Add(new OracleParameter("P_w_requisito_sanitario", solicitud.w_requisito_sanitario));
+                    cmd.Parameters.Add(new OracleParameter("P_w_temperatura", solicitud.w_temperatura));
+                    cmd.Parameters.Add(new OracleParameter("P_w_frecuencia_cardiaca", solicitud.w_frecuencia_cardiaca));
+                    cmd.Parameters.Add(new OracleParameter("P_w_frecuencia_respiratoria", solicitud.w_frecuencia_respiratoria));
+                    cmd.Parameters.Add(new OracleParameter("P_w_color_mucosas", solicitud.w_color_mucosas));
+                    cmd.Parameters.Add(new OracleParameter("P_w_heridas", solicitud.w_heridas));
+                    cmd.Parameters.Add(new OracleParameter("P_w_parasitos_externos", solicitud.w_parasitos_externos));
+                    cmd.Parameters.Add(new OracleParameter("P_w_parasitos_internos", solicitud.w_parasitos_internos));
+                    cmd.Parameters.Add(new OracleParameter("P_w_apto_certificacion", solicitud.w_apto_certificacion));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_MODI", solicitud.user_modi));
+                    cmd.Parameters.Add(new OracleParameter("P_ESTADO_CERT", solicitud.estado_cert));
+
+                    try
+                    {
+                        conx.Open();
+                        cmd.ExecuteNonQuery();
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        data.mensaje = ex.Message.ToString();
+                        Logger.registrar_linea("aprobar_certificacion_esp", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return data;
+        }
         public respuestaBE replicar_solicitud(solicitud_inspeccion_expo_cabBE solicitud)
         {
             respuestaBE data = new respuestaBE();
@@ -2538,6 +2594,7 @@ namespace Mascota
                                 item.codi_empl_esp = helperDA.GetString(reader, "codi_empl_esp");
                                 item.nomb_empl_rev = helperDA.GetString(reader, "nomb_empl_rev");
                                 item.nomb_empl_esp = helperDA.GetString(reader, "nomb_empl_esp");
+                                item.dni_esp = helperDA.GetString(reader, "dni_esp");
                                 item.usu_empl_rev = helperDA.GetString(reader, "usu_empl_rev");
                                 item.usu_empl_esp = helperDA.GetString(reader, "usu_empl_esp");
 
