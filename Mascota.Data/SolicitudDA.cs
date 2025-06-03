@@ -2083,6 +2083,40 @@ namespace Mascota
             return data;
         }
 
+
+        public respuestaBE regresar_paso_anterior(solicitud_inspeccion_expo_cabBE solicitud)
+        {
+            respuestaBE data = new respuestaBE();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_regresar_paso_anterior";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID", solicitud.id));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_MODI", solicitud.user_modi));
+
+                    try
+                    {
+                        conx.Open();
+                        cmd.ExecuteNonQuery();
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        data.mensaje = ex.Message.ToString();
+                        Logger.registrar_linea("regresar_paso_anterior", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return data;
+        }
+
         public respuestaBE registrar_asignacion_solicitud(solicitud_inspeccion_expo_cabBE _data)
         {
             respuestaBE data = new respuestaBE();

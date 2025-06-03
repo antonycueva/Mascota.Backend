@@ -223,6 +223,11 @@ namespace Mascota
             return new solicitudDA(conn).registrar_documento3(data);
         }
 
+        public static respuestaBE regresar_paso_anterior(solicitud_inspeccion_expo_cabBE data)
+        {
+            return new solicitudDA(conn).regresar_paso_anterior(data);
+        }
+
         public static respuestaBE registrar_asignacion_solicitud(solicitud_inspeccion_expo_cabBE data)
         {
             return new solicitudDA(conn).registrar_asignacion_solicitud(data);

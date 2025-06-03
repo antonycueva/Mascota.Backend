@@ -387,6 +387,14 @@ namespace Mascota.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route("documento/regresar_paso_anterior")]
+        public respuestaBE regresar_paso_anterior(solicitud_inspeccion_expo_cabBE input)
+        {
+            respuestaBE data = solicitudBL.regresar_paso_anterior(input);
+            return data;
+        }
+
+        [HttpPost]
         [Route("asignacion_solicitud/registrar")]
         public respuestaBE registrar_asignacion_solicitud(solicitud_inspeccion_expo_cabBE input)
         {
