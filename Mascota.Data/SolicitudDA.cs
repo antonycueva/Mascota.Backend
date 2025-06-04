@@ -2185,6 +2185,43 @@ namespace Mascota
             }
             return data;
         }
+
+        public respuestaBE aperturar_solicitud(solicitud_asignacionBE _data)
+        {
+            respuestaBE data = new respuestaBE();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_aperturar_solicitud";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID", _data.id));
+                    cmd.Parameters.Add(new OracleParameter("P_TIPO_MODI", _data.tipo));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_EMPL", _data.codigo));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_MODI", _data.user_modi));
+
+                    try
+                    {
+                        conx.Open();
+                        cmd.ExecuteNonQuery();
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        data.mensaje = ex.Message.ToString();
+                        Logger.registrar_linea("aperturar_solicitud", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return data;
+        }
+
+
         public respuestaBE liberar_asignacion(solicitud_asignacionBE _data)
         {
             respuestaBE data = new respuestaBE();

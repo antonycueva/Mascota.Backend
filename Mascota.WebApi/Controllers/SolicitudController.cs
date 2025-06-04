@@ -513,6 +513,16 @@ namespace Mascota.WebApi.Controllers
             respuestaBE data = solicitudBL.reservar_asignacion(input);
             return data;
         }
+
+
+        [HttpPost]
+        [Route("responsable_ctd/aperturar")]
+        public respuestaBE aperturar_solicitud(solicitud_asignacionBE input)
+        {
+            respuestaBE data = solicitudBL.aperturar_solicitud(input);
+            return data;
+        }
+
         [HttpPost]
         [Route("asignacion_solicitud/liberar")]
         public respuestaBE liberar_asignacion(solicitud_asignacionBE input)

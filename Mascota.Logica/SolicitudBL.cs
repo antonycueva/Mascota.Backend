@@ -236,6 +236,11 @@ namespace Mascota
         {
             return new solicitudDA(conn).reservar_asignacion(data);
         }
+
+        public static respuestaBE aperturar_solicitud(solicitud_asignacionBE data)
+        {
+            return new solicitudDA(conn).aperturar_solicitud(data);
+        }
         public static respuestaBE liberar_asignacion(solicitud_asignacionBE data)
         {
             return new solicitudDA(conn).liberar_asignacion(data);
