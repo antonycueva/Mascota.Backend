@@ -929,6 +929,9 @@ namespace Mascota
                                 item.cumple_req_pais_des = helperDA.GetString(reader, "CUMPLE_REQ_PAIS_DES");
                                 item.cumple_exg_senasa = helperDA.GetString(reader, "CUMPLE_EXG_SENASA");
                                 item.apto_cert = helperDA.GetString(reader, "APTO_CERT");
+                                item.total_mercancia = helperDA.GetString(reader, "TOTAL_MERCANCIA");
+                                item.desc_certificado_expo = helperDA.GetString(reader, "DESC_CERTIFICADO_EXPO");
+                                item.observacion_certificado_expo = helperDA.GetString(reader, "OBSERVACION_CERTIFICADO_EXPO");
 
                                 lista.Add(item);
                             }
@@ -975,6 +978,7 @@ namespace Mascota
                                 item.raza = helperDA.GetString(reader, "RAZA");
                                 item.sexo = helperDA.GetString(reader, "SEXO");
                                 item.edad = helperDA.GetString(reader, "EDAD");
+                                item.pais_origen_animal = helperDA.GetString(reader, "PAIS_ORIGEN_ANIMAL");
                                 lista.Add(item);
                             }
                         }

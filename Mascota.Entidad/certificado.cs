@@ -29,6 +29,9 @@ namespace Mascota.Entidad
         public string cumple_req_pais_des { get; set; } = string.Empty;
         public string cumple_exg_senasa { get; set; } = string.Empty;
         public string apto_cert { get; set; } = string.Empty;
+        public string total_mercancia {  get; set; } = string.Empty;
+        public string desc_certificado_expo { get; set; } = string.Empty;
+        public string observacion_certificado_expo { get; set; } = string.Empty;
 
     }
 
@@ -40,5 +43,6 @@ namespace Mascota.Entidad
         public string raza { get; set; } = string.Empty;
         public string sexo { get; set; } = string.Empty;
         public string edad { get; set; } = string.Empty;
+        public string pais_origen_animal { get; set; } = string.Empty;
     }
 }

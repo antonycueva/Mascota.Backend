@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mascota.Logica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75ba6411c8c79ac5f3317678cbabeeb48aece81d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f6ac8952af6f05b9784b704522186df3dc2ed0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mascota.Logica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mascota.Logica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
