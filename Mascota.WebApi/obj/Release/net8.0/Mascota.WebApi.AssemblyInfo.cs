@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mascota.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73b5b0aa0362c7d211531dc464844875b2ef868c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de16579014d6803f74daeb8c9452f4f51bdd301a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mascota.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mascota.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

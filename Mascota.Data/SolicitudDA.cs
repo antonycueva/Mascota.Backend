@@ -2438,7 +2438,6 @@ namespace Mascota
                     cmd.Parameters.Add(new OracleParameter("P_CODIGO_CERTIFICADO", solicitud.codigo_certificado));
                     cmd.Parameters.Add(new OracleParameter("P_DESC_CERTIFICADO_EXPO", solicitud.desc_certificado_expo));
                     cmd.Parameters.Add(new OracleParameter("P_OBSERVACION_CERTIFICADO_EXPO", solicitud.observacion_certificado_expo));
-                    cmd.Parameters.Add(new OracleParameter("P_MEDIDA_SANITARIA_CERT", solicitud.medida_sanitaria_cert));
                     cmd.Parameters.Add(new OracleParameter("P_IDIOMA_CERT", solicitud.idioma_cert)); 
                     cmd.Parameters.Add(new OracleParameter("P_w_certificado_vacunacion", solicitud.w_certificado_vacunacion));
                     cmd.Parameters.Add(new OracleParameter("P_w_certificado_salud", solicitud.w_certificado_salud));
@@ -2494,7 +2493,6 @@ namespace Mascota
                     cmd.Parameters.Add(new OracleParameter("P_CODIGO_CERTIFICADO", solicitud.codigo_certificado));
                     cmd.Parameters.Add(new OracleParameter("P_DESC_CERTIFICADO_EXPO", solicitud.desc_certificado_expo));
                     cmd.Parameters.Add(new OracleParameter("P_OBSERVACION_CERTIFICADO_EXPO", solicitud.observacion_certificado_expo));
-                    cmd.Parameters.Add(new OracleParameter("P_MEDIDA_SANITARIA_CERT", solicitud.medida_sanitaria_cert));
                     cmd.Parameters.Add(new OracleParameter("P_IDIOMA_CERT", solicitud.idioma_cert));
                     cmd.Parameters.Add(new OracleParameter("P_w_certificado_vacunacion", solicitud.w_certificado_vacunacion));
                     cmd.Parameters.Add(new OracleParameter("P_w_certificado_salud", solicitud.w_certificado_salud));
