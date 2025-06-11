@@ -114,7 +114,6 @@
         public string codigo_certificado { get; set; } = string.Empty;
         public string desc_certificado_expo { get; set; } = string.Empty;
         public string observacion_certificado_expo { get; set; } = string.Empty;
-        public string medida_sanitaria_cert { get; set; } = string.Empty;
         public string idioma_cert { get; set; } = string.Empty;
         public string estado_cert { get; set; } = string.Empty;
 

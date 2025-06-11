@@ -2680,9 +2680,10 @@ namespace Mascota
                                 item.codigo_certificado = helperDA.GetString(reader, "CODIGO_CERTIFICADO");
                                 item.desc_certificado_expo = helperDA.GetString(reader, "DESC_CERTIFICADO_EXPO");
                                 item.observacion_certificado_expo = helperDA.GetString(reader, "OBSERVACION_CERTIFICADO_EXPO");
-                                item.medida_sanitaria_cert = helperDA.GetString(reader, "MEDIDA_SANITARIA_CERT");
+                               
                                 item.idioma_cert = helperDA.GetString(reader, "IDIOMA_CERT");
                                 item.estado_cert = helperDA.GetString(reader, "ESTADO_CERT");
+                                item.numero_expediente = helperDA.GetString(reader, "NUMERO_EXPEDIENTE");
 
 
 
