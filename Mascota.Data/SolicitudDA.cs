@@ -1914,6 +1914,7 @@ namespace Mascota
             }
             return data;
         }
+
         public respuestaBE registrar_pago(solicitud_inspeccion_expo_cabBE solicitud)
         {
             respuestaBE data = new respuestaBE();
@@ -1941,6 +1942,43 @@ namespace Mascota
                     {
                         data.mensaje = ex.Message.ToString();
                         Logger.registrar_linea("registrar_pago", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return data;
+        }
+
+        public respuestaBE registrar_pago_opcion_terceros(solicitud_inspeccion_expo_cabBE solicitud)
+        {
+            respuestaBE data = new respuestaBE();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_registrar_pago";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID", solicitud.id));
+                    cmd.Parameters.Add(new OracleParameter("P_CODIGO_CLASE", solicitud.codigo_clase));
+                    cmd.Parameters.Add(new OracleParameter("P_CODIGO_PROCEDIMIENTO_TUPA", solicitud.codigo_procedimiento_tupa));
+                    cmd.Parameters.Add(new OracleParameter("P_CODIGO_AREA_GESTION", solicitud.codigo_area_gestion));
+                    cmd.Parameters.Add(new OracleParameter("P_CODIGO_SERVICIO", solicitud.codigo_servicio));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_MODI", solicitud.user_modi));
+
+                    try
+                    {
+                        conx.Open();
+                        cmd.ExecuteNonQuery();
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        data.mensaje = ex.Message.ToString();
+                        Logger.registrar_linea("registrar_pago_opcion_terceros", ex.Message.ToString());
                     }
                     finally
                     {
@@ -2377,6 +2415,54 @@ namespace Mascota
                     {
                         data.mensaje = ex.Message.ToString();
                         Logger.registrar_linea("enviar_revision_solicitud", ex.Message.ToString());
+                    }
+                    finally
+                    {
+                        conx.Close();
+                    }
+                }
+            }
+            return data;
+        }
+
+        public respuestaBE devolver_revision_medico_veterinario(solicitud_inspeccion_expo_cabBE _data)
+        {
+            respuestaBE data = new respuestaBE();
+            using (OracleConnection conx = new OracleConnection(conexion))
+            {
+                helperDA.GetLogonVersionClient(conx);
+                using (OracleCommand cmd = conx.CreateCommand())
+                {
+                    cmd.CommandText = "pkg_mascotaweb.usp_devolver_revision_mv";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new OracleParameter("P_ID", _data.id));
+                    cmd.Parameters.Add(new OracleParameter("P_w_certificado_vacunacion", _data.w_certificado_vacunacion));
+                    cmd.Parameters.Add(new OracleParameter("P_w_certificado_salud", _data.w_certificado_salud));
+                    cmd.Parameters.Add(new OracleParameter("P_w_recibo_pago", _data.w_recibo_pago));
+                    cmd.Parameters.Add(new OracleParameter("P_w_constancia_microchip", _data.w_constancia_microchip));
+                    cmd.Parameters.Add(new OracleParameter("P_w_documentos_laboratorio", _data.w_documentos_laboratorio));
+                    cmd.Parameters.Add(new OracleParameter("P_w_requisito_sanitario", _data.w_requisito_sanitario));
+                    cmd.Parameters.Add(new OracleParameter("P_w_temperatura", _data.w_temperatura));
+                    cmd.Parameters.Add(new OracleParameter("P_w_frecuencia_cardiaca", _data.w_frecuencia_cardiaca));
+                    cmd.Parameters.Add(new OracleParameter("P_w_frecuencia_respiratoria", _data.w_frecuencia_respiratoria));
+                    cmd.Parameters.Add(new OracleParameter("P_w_color_mucosas", _data.w_color_mucosas));
+                    cmd.Parameters.Add(new OracleParameter("P_w_heridas", _data.w_heridas));
+                    cmd.Parameters.Add(new OracleParameter("P_w_parasitos_externos", _data.w_parasitos_externos));
+                    cmd.Parameters.Add(new OracleParameter("P_w_parasitos_internos", _data.w_parasitos_internos));
+                    cmd.Parameters.Add(new OracleParameter("P_w_apto_certificacion", _data.w_apto_certificacion));
+                    cmd.Parameters.Add(new OracleParameter("P_COMENTARIO_REVISION", _data.comentario_revision));
+                    cmd.Parameters.Add(new OracleParameter("P_USER_MODI", _data.user_modi));
+
+                    try
+                    {
+                        conx.Open();
+                        cmd.ExecuteNonQuery();
+                        conx.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        data.mensaje = ex.Message.ToString();
+                        Logger.registrar_linea("devolver_revision_medico_veterinario", ex.Message.ToString());
                     }
                     finally
                     {

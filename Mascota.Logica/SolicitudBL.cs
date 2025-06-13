@@ -176,6 +176,17 @@ namespace Mascota
             //    };
             //    utilidadBL.enviar_correo(_correo);
             //}
+            if (!string.IsNullOrEmpty(data.correo_contacto) && string.IsNullOrEmpty(respuesta.mensaje))
+            {
+                Correo _correo = new Correo()
+                {
+                    de = AppSettingHelper.usuario,
+                    para = data.correo_contacto,
+                    asunto = string.Format("Registro de solicitud de inspección {0} en plataforma de mascota web", data.id.ToString().PadLeft(7, '0')),
+                    contenido = utilidadBL.contenido_registrar_solicitud(data)
+                };
+                utilidadBL.enviar_correo(_correo);
+            }
             return respuesta;
         }
         public static respuestaBE registrar_recibo(solicitud_insepccion_expo_recibo_pagoBE data)
@@ -205,6 +216,10 @@ namespace Mascota
                 utilidadBL.enviar_correo(_correo);
             }
             return respuesta;
+        }
+        public static respuestaBE registrar_pago_opcion_terceros(solicitud_inspeccion_expo_cabBE data)
+        {
+            return new solicitudDA(conn).registrar_pago_opcion_terceros(data);
         }
         public static respuestaBE registrar_documento(solicitud_inspeccion_expo_doc_adj_detBE data)
         {
@@ -257,6 +272,13 @@ namespace Mascota
         {
             return new solicitudDA(conn).enviar_revision_solicitud(data);
         }
+
+        public static respuestaBE devolver_revision_medico_veterinario(solicitud_inspeccion_expo_cabBE data)
+        {
+            return new solicitudDA(conn).devolver_revision_medico_veterinario(data);
+        }
+
+
         public static respuestaBE registrar_revision_senasa(solicitud_inspeccion_expo_cabBE data)
         {
             return new solicitudDA(conn).registrar_revision_senasa(data);

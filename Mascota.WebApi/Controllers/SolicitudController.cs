@@ -370,6 +370,15 @@ namespace Mascota.WebApi.Controllers
             return data;
         }
 
+
+        [HttpPost]
+        [Route("recibo/pago_terceros")]
+        public respuestaBE registrar_pago_opcion_terceros(solicitud_inspeccion_expo_cabBE input)
+        {
+            respuestaBE data = solicitudBL.registrar_pago_opcion_terceros(input);
+            return data;
+        }
+
         [HttpPost]
         [Route("documento/registrar2")]
         public respuestaBE registrar_documento2(solicitud_inspeccion_expo_doc_adj_detBE input)
@@ -416,6 +425,16 @@ namespace Mascota.WebApi.Controllers
             respuestaBE data = solicitudBL.enviar_revision_solicitud(input);
             return data;
         }
+
+        [HttpPost]
+        [Route("devolver_revision_medico_veterinario/enviar")]
+        public respuestaBE devolver_revision_medico_veterinario(solicitud_inspeccion_expo_cabBE input)
+        {
+            respuestaBE data = solicitudBL.devolver_revision_medico_veterinario(input);
+            return data;
+        }
+
+
         [HttpPost]
         [Route("revision_senasa/registrar")]
         public respuestaBE registrar_revision_senasa(solicitud_inspeccion_expo_cabBE input)
