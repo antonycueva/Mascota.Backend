@@ -50,6 +50,8 @@ namespace Mascota
         public string codigo_especialista { get; set; } = string.Empty;
         public string numero_expediente { get; set; } = string.Empty;
 
+        public string asignacion { get; set; } = string.Empty;
+
 
     }
 }

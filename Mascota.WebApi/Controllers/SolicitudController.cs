@@ -461,6 +461,14 @@ namespace Mascota.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route("certificacion/devolver_esp")]
+        public respuestaBE devolver_solicitud_esp(solicitud_inspeccion_expo_cabBE input)
+        {
+            respuestaBE data = solicitudBL.devolver_solicitud_esp(input);
+            return data;
+        }
+
+        [HttpPost]
         [Route("replicar")]
         public respuestaBE replicar_solicitud(solicitud_inspeccion_expo_cabBE input)
         {

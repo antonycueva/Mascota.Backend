@@ -291,6 +291,10 @@ namespace Mascota
         {
             return new solicitudDA(conn).aprobar_certificacion_esp(data);
         }
+        public static respuestaBE devolver_solicitud_esp(solicitud_inspeccion_expo_cabBE data)
+        {
+            return new solicitudDA(conn).devolver_solicitud_esp(data);
+        }
         public static solicitud_inspeccion_expo_cabBE recuperar_solicitud(int id_solicitud)
         {
             return new solicitudDA(conn).recuperar_solicitud(id_solicitud);
